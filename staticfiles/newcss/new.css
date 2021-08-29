@@ -1,0 +1,123 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    font-family:poppins;
+    background: #00A8FF;
+    height: 100vh;
+    }
+    a{
+    font-size: 12px;
+    text-transform: uppercase;
+    } */
+    .nav-area{
+        background: #f30b0be1 !important;
+        }
+    .nav-area:after{
+    content: '';
+    clear: both;
+    display: block;
+    }
+    .nav-area ul{
+    list-style: none;
+    margin: 0;
+    }
+    .menu {
+    width: 500px;
+    margin: 0 auto !important;
+    }        
+    .nav-area > ul > li{
+    float: left;
+    position: relative;
+    }
+    .nav-area ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 1px;
+    }
+    .nav-area ul li:hover a{
+    background:rgb(255, 3, 3)
+    }
+     
+    .nav-area ul ul {
+    position: absolute;
+    padding: 0;
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+    }
+    .nav-area ul li:hover > ul{
+    display: block;
+    }
+    .nav-area ul ul li:hover a{
+    background:#f30b0be1;
+    }
+    .nav-area ul ul li{
+    position: relative;
+    }
+    .nav-area ul ul ul{
+    top: 0;
+    left: 100%;
+    }
+    .nav-area ul ul ul li:hover a{
+    background:rgb(255, 3, 3);
+    }
+
+
+    /* sider-imG add */
+    .errorlist li{
+        list-style: none!important;
+        display: none;
+    }
+    #slider_images form {
+        border: 5px solid red!important;
+        position: relative;
+        top:142px;
+        width:50%;
+        height: auto;
+        border-radius: 5px;
+        background-color: honeydew;
+    }
+    label{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    }
+    button, input, optgroup, select, textarea {
+        font-family: inherit;
+        border: 1px solid #737368!important;
+        border-radius: 5px!important;
+    }
+    .submit-btn{
+        width: 50%!important;
+
+    }
+    #ser{
+        z-index: 99!important;
+    }
+    .btn{
+        width: 50%!important;
+    }
+    #slider_images{
+        background:greenyellow;
+        height: 100vh;
+    }
+    .blog{
+        background-color: lawngreen!important;
+    }
+    form {
+        border: 5px solid red!important;
+        position: relative;
+        top:10px;
+        width:50%;
+        height: auto;
+        border-radius: 5px;                     
+        background-color: honeydew;
+    }
+
+    
+/* sider-img add */

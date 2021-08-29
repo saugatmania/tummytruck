@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Product purchases</h2>
+    <table class="table table-striped">
+            <style>
+                table {
+          width: 100%;
+        }
+                h2 {text-align: center}
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Is active</th>
+                <
+            </tr>
+        {% for slider_images in slider_images %}
+        <tr>
+            <td style="text-align:center">{{slider_images.title}}</td>
+            <td style="text-align:center">{{slider_images.image}}</td>
+            <td style="text-align:center">{{slider_images.is_active}}</td>
+           
+        </tr>
+        {% endfor %}
+</table>
+{% endblock content %}

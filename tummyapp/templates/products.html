@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Products</h2>
+    <table class="table table-striped">
+            <style>
+                table {
+          width: 100%;
+        }
+                h2 {text-align: center}
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Created</th>
+                <th>Modified</th>
+            </tr>
+        {% for products in products %}
+        <tr>
+            <td style="text-align:center">{{products.name}}</td>
+            <td style="text-align:center">{{products.price}}</td>
+            <td style="text-align:center">{{products.description}}</td>
+            <td>
+                    {% if products.image %}
+                        {% comment %} <img width="100" height="100" src="{{ products.image.url }}" alt="..."/> {% endcomment %}
+                        {{ products.image.url }}
+                    {% else %}
+                        <span> Imaged not uploaded</span>
+                    {% endif %}
+                </td>
+            <td style="text-align:center">{{products.category}}</td>
+            <td style="text-align:center">{{products.created}}</td>
+            <td style="text-align:center">{{products.modified}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Email otps</h2>
+    <table class="table table-striped">
+        <style>
+            table {
+      width: 100%;
+    }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>Phone</th>
+            <th>Otp</th>
+            <th>Validated</th>
+            <th>Count</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Forgot</th>
+            <th>Forgot logged</th>
+            
+        </tr>
+    {% for email_otps in email_otps %}
+    <tr>
+        
+        <td style="text-align:center">{{email_otps.phone}}</td>
+        <td style="text-align:center">{{email_otps.otp}}</td>
+        <td style="text-align:center">{{email_otps.validated}}</td>
+        <td style="text-align:center">{{email_otps.count}}</td>
+        <td style="text-align:center">{{email_otps.date}}</td>
+        <td style="text-align:center">{{email_otps.time}}</td>
+        <td style="text-align:center">{{email_otps.forgot}}</td>
+        <td style="text-align:center">{{email_otps.forgot_logged}}</td>
+        
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

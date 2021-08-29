@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Users</h2>
+    <table class="table table-striped">
+        <style>
+            table {
+      width: 100%;
+    }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Is customer</th>
+            <th>Is logistic</th>
+            <th>Staff status</th>
+            <th>Active</th>
+            <th>Superuser status</th>
+            <th>Password</th>
+            <th>Password confirmation</th>
+          
+            
+            
+            
+        </tr>
+    {% for users in users %}
+    <tr>
+        
+        <td style="text-align:center">{{users.email}}</td>
+        <td style="text-align:center">{{users.phone}}</td>
+        <td style="text-align:center">{{users.is_customer}}</td>
+        <td style="text-align:center">{{users.is_logistic}}</td>
+        <td style="text-align:center">{{users.staff_status}}</td>
+        <td style="text-align:center">{{users.active}}</td>
+        <td style="text-align:center">{{users.superuser_status}}</td>
+        <td style="text-align:center">{{users.password}}</td>
+        <td style="text-align:center">{{users.password_confirmation}}</td>
+        
+        
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

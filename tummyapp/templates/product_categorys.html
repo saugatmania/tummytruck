@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Product categorys</h2>
+    <table class="table table-striped">
+            <style>
+                table {
+          width: 100%;
+        }
+                h2 {text-align: center}
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+            <tr>
+                <th>Name</th>
+                <th>Parent</th>
+                <th>Created</th>
+                <th>Modified</th>
+            </tr>
+        {% for product_categorys in product_categorys %}
+        <tr>
+            <td style="text-align:center">{{product_categorys.name}}</td>
+            <td style="text-align:center">{{product_categorys.parent}}</td>
+            <td style="text-align:center">{{product_categorys.created}}</td>
+            <td style="text-align:center">{{product_categorys.modified}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}

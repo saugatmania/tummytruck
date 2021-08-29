@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Blog posts</h2>
+    <table class="table table-striped">
+        <style>
+            table {
+      width: 100%;
+    }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Image</th>
+            
+        </tr>
+    {% for blog_posts in blog_posts %}
+    <tr>
+        
+        <td style="text-align:center">{{blog_posts.description}}</td>
+        <td style="text-align:center">{{blog_posts.title}}</td>
+        <td style="text-align:center">{{blog_posts.subtitle}}</td>
+        <td>
+                    {% if blog_posts.image %}
+                        {% comment %} <img width="100" height="100" src="{{ blog_posts.image.url }}" alt="..."/> {% endcomment %}
+                        {{ blog_posts.image.url }}
+                    {% else %}
+                        <span> Imaged not uploaded</span>
+                    {% endif %}
+                </td>
+        
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

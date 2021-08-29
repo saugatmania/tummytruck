@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Packages</h2>
+    <table class="table table-striped">
+            <style>
+                table {
+          width: 100%;
+        }
+                h2 {text-align: center}
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Created</th>
+                <th>Modified</th>
+
+            </tr>
+        {% for packages in packages %}
+        <tr>
+            <td style="text-align:center">{{packages.name}}</td>
+            <td style="text-align:center">{{packages.description}}</td>
+            <td style="text-align:center">{{packages.created}}</td>
+            <td style="text-align:center">{{packages.modified}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

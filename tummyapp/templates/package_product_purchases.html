@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Package product purchases</h2>
+
+
+
+
+    <table class="table table-striped">
+        <style>
+            table {
+        width: 100%;
+        }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>Package</th>
+            <th>Week</th>
+            <th>Unit price</th>
+            <th>Quantity</th>
+            <th>Order</th>
+            <th>Total price</th>
+            <th>Customer</th>
+            <th>Created</th>
+            <th>Modified</th>
+            <th>Checkout</th>
+            <th>ACTION</th>
+        </tr>
+
+        {% for package_product_purchases in package_product_purchases %}
+        <tr>
+            <td style="text-align:center">{{package_product_purchases.package}}</td>
+            <td style="text-align:center">{{package_product_purchases.week}}</td>
+            <td style="text-align:center">{{package_product_purchases.unit_price}}</td>
+            <td style="text-align:center">{{package_product_purchases.quantity}}</td>
+            <td style="text-align:center">{{package_product_purchases.order}}</td>
+            <td style="text-align:center">{{package_product_purchases.total_price}}</td>
+            <td style="text-align:center">{{package_product_purchases.customer}}</td>
+            <td style="text-align:center">{{package_product_purchases.created}}</td>
+            <td style="text-align:center">{{package_product_purchases.modified}}</td>
+            <td style="text-align:center">{{package_product_purchases.checkout}}</td>
+       
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>User notifications</h2>
+    <table class="table table-striped">
+        <style>
+            table {
+      width: 100%;
+    }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>User</th>
+            <th>Message</th>
+            <th>Title</th>
+            
+            
+        </tr>
+    {% for user_notifications in user_notifications %}
+    <tr>
+        
+        <td style="text-align:center">{{user_notifications.user}}</td>
+        <td style="text-align:center">{{user_notifications.message}}</td>
+        <td style="text-align:center">{{user_notifications.title}}</td>
+        
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

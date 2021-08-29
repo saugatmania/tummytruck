@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Profiles</h2>
+    <table class="table table-striped">
+        <style>
+            table {
+      width: 100%;
+    }
+            h2 {text-align: center}
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+        <tr>
+            <th>User</th>
+            <th>Full name</th>
+            <th>Occupation</th>
+            <th>Location</th>
+            <th>Phone number</th>
+            <th>Lunch time</th>
+            
+            
+        </tr>
+    {% for profiles in profiles %}
+    <tr>
+        
+        <td style="text-align:center">{{profiles.user}}</td>
+        <td style="text-align:center">{{profiles.full_name}}</td>
+        <td style="text-align:center">{{profiles.occupation}}</td>
+        <td style="text-align:center">{{profiles.location}}</td>
+        <td style="text-align:center">{{profiles.phone}}</td>
+        <td style="text-align:center">{{profiles.lunch_time}}</td>
+        
+        
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}

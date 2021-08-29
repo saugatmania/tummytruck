@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Package products</h2>
+    <table class="table table-striped">
+            <style>
+                table {
+          width: 100%;
+        }
+                h2 {text-align: center}
+                table, th, td {
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                }
+                </style>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Package</th>
+                <th>Week</th>
+                <th>Day</th>
+                <th>Image</th>
+                <th>Created</th>
+                <th>Modified</th>
+            </tr>
+        {% for package_products in package_products %}
+        <tr>
+            <td style="text-align:center">{{package_products.name}}</td>
+            <td style="text-align:center">{{package_products.price}}</td>
+            <td style="text-align:center">{{package_products.description}}</td>
+            <td style="text-align:center">{{package_products.package}}</td>
+            <td style="text-align:center">{{package_products.week}}</td>
+            <td style="text-align:center">{{package_products.day}}</td>
+            <td>
+                    {% if package_products.image %}
+                        {% comment %} <img width="100" height="100" src="{{ package_products.image.url }}" alt="..."/> {% endcomment %}
+                        {{ package_products.image.url }}
+                    {% else %}
+                        <span> Imaged not uploaded</span>
+                    {% endif %}
+                </td>
+            <td style="text-align:center">{{package_products.created}}</td>
+            <td style="text-align:center">{{package_products.modified}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
